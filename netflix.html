@@ -5,7 +5,328 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
-    <link rel="stylesheet" href="style2.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    height: 640px;
+    background-image: url(images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    position: relative;
+}
+
+.main .box {
+    height: 640px;
+    width: 100%;
+    opacity: 0.7;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    margin: auto;
+    max-width: 60vw;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    /* padding: 7px; */
+}
+
+nav img {
+    width: 130px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    color: white;
+    gap: 23px;
+    padding: 0 30px;
+}
+
+.hero> :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.btn {
+    padding: 2px 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid white;
+    font-weight: 400;
+    padding: 3px 8px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.2);
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-red {
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    padding: 3px 20px;
+    font-weight: 400;
+}
+
+.main input {
+    padding: 7px 100px 7px 10px;
+    font-size: 12px;
+    color: white;
+    border: 1px solid rgba(246, 238, 238, 0.5);
+    background-color: rgba(23, 23, 23, 0.7);
+    border-radius: 4px;
+}
+
+.separation {
+    height: 7px;
+    background-color: rgb(44, 42, 42);
+    position: relative;
+    z-index: 11;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    max-width: 70vw;
+    margin: auto;
+    gap: 30px;
+}
+
+.secimg {
+    position: relative;
+}
+
+.secimg img {
+    position: relative;
+    z-index: 10;
+    width: 560px;
+}
+
+.secimg video {
+    position: absolute;
+    width: 555px;
+    top: 51px;
+    right: 3px;
+}
+
+section.first>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+
+}
+
+section.first>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+section.first>div :nth-child(2) {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.faq {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    /* margin: 50px; */
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faqbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60vw;
+    width: 70vw;
+    height: 20px;
+    background-color: rgb(45, 44, 44);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 10px;
+    transition: all 1s ease-out;
+}
+
+.faqbox:hover {
+    background-color: rgb(79, 78, 78);
+    color: whitesmoke
+}
+
+
+.faqbox svg {
+    filter: invert(1);
+}
+
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 60px;
+
+
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 14px;
+    gap: 20px;
+
+}
+
+.questions {
+    padding: 34px 0;
+}
+
+.footer a {
+    padding: 10px 0;
+    color: white;
+
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 1300px) {
+
+    nav {
+        max-width: 90vw;
+    }
+
+    .secimg img {
+        width: 300px;
+    }
+
+    .secimg video {
+        width: 295px;
+    }
+
+    .faq {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+        font-weight: bolder;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    section.first>div :nth-child(1) {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    section.first>div :nth-child(2) {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 75px 0;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 14px;
+    }
+
+    .footer-item {
+        gap: 0 100px;
+        align-items: center;
+    }
+
+
+}
+    </style>
 </head>
 
 <body>
